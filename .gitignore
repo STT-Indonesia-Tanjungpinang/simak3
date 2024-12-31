@@ -1,0 +1,44 @@
+# Pipenv
+Pipfile
+Pipfile.lock
+.venv/
+venv/
+env/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Testing files
+.pytest_cache/
+nosetests.xml
+
+# IDE files
+*.pyc
+*.pyo
+__pycache__/
+.vscode/
+.idea/
+.DS_Store
+
+# Local configuration
+instance/config.py
+.env
+.flaskenv
+
+# Secret files
+secret_key.txt
+
+# Logs
+*.log
+
+# Generated files
+docs/_build/
+
+# Flask-specific
+*.sqlite
+*.db
