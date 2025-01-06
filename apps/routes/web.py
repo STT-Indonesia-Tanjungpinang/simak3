@@ -1,5 +1,5 @@
 from flask import Blueprint
-from src.controllers.FrontendController import frontend_index
+from apps.controllers.FrontendController import frontend_index
 
 web_route = Blueprint('blueprint', __name__)
 
