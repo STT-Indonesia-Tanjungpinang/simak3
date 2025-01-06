@@ -1,12 +1,17 @@
+import os
 from flask import Flask
+from src.routes.web import web_route
 
-from api.routes import api
-from sites.routes import site
+def create_app():
+  template_dir = os.path.abspath('../../src/views')
 
-app = Flask(__name__)
+  app = Flask(__name__, template_folder = template_dir)  # flask app object
 
-app.register_blueprint(api)
-app.register_blueprint(site)
+  # register blueprint
+  app.register_blueprint(web_route, url_prefix='/')
+  return app
 
-if __name__ == '__main__':
-  app.run(debug = True)
+app = create_app()  
+
+if __name__ == '__main__':  # Running the app
+  app.run(host='127.0.0.1', port=5000, debug=True)
