@@ -5,6 +5,8 @@ Pipfile.lock
 venv/
 env/
 
+static/adminlte
+
 # Build artifacts
 *.egg-info/
 dist/
